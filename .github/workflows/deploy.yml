@@ -15,8 +15,8 @@ jobs:
         with:
           go-version: 1.21
       
-      - name: Build
-        run: go build -o podcaster
+      - name: Install dependencies
+        run: go mod download
       
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
@@ -24,3 +24,4 @@ jobs:
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           usedocker: false
+          appdir: /

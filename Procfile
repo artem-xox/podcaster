@@ -1,1 +1,1 @@
-worker: ./podcaster
+worker: go run main.go
