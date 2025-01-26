@@ -35,6 +35,8 @@ const (
 
 func main() {
 	// Initialize Telegram bot
+	fmt.Println("bot is starting...")
+
 	var err error
 	bot, err = tgbotapi.NewBotAPI(os.Getenv("TELEGRAM_BOT_TOKEN"))
 	if err != nil {
@@ -62,6 +64,8 @@ func main() {
 	u := tgbotapi.NewUpdate(0)
 	u.Timeout = 60
 	updates := bot.GetUpdatesChan(u)
+
+	fmt.Println("handling incoming updates...")
 
 	// Handle incoming updates
 	for update := range updates {
