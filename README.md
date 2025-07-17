@@ -33,10 +33,10 @@ Podcaster is a small Telegram bot that helps you quickly generate short podcasts
 3. Run the bot locally:
 
    ```bash
-   go run .
+   go run ./cmd/podcaster
    ```
 
-   You can also build a binary with `go build` and run the resulting `podcaster` executable.
+   You can also build a binary with `go build ./cmd/podcaster` and run the resulting `podcaster` executable.
 
 The included `Procfile` (`worker: podcaster`) shows a minimal setup for hosting on platforms such as Heroku.
 
